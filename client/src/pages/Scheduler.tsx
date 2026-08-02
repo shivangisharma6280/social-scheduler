@@ -110,7 +110,7 @@ const handleSchedule = async (e: React.FormEvent) =>{
                 </div>
               </div>
               <div>
-                <label className="block text-sm text-slate-500 uppercase mb-2">Date</label>
+                <label className="block text-sm text-slate-500 uppercase mb-2">Time</label>
                 <div className="relative">
                   <ClockIcon className="size-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"/>
                   <input type="time" required className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-sm outline-none" value={scheduledTime} onChange={(e)=>setScheduledTime(e.target.value)} />
