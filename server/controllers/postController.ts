@@ -103,7 +103,7 @@ The "imagePrompt" should be a highly descriptive prompt for an image generator t
       prompt,
       content,
       mediaUrl,
-      mediatype: mediaUrl ? "image" : undefined,
+      mediaType: mediaUrl ? "image" : undefined,
       tone,
     });
 

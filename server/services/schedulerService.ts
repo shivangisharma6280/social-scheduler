@@ -24,7 +24,7 @@ export const initScheduler = () =>{
                     continue;
                 }
                 const zernioPlatforms = accounts.map((acc)=>({
-                    tform: acc.platform as any,
+                    platform: acc.platform as any,
                     accountId: acc.zernioAccountId!
                 }))
 
