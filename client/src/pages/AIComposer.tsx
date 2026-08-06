@@ -57,12 +57,18 @@ const handleGenerate = async ()=>{
 
 const handleSchedule = async ()=>{
   if(!activeScheduler) return;
-  if(selectedPlatforms.length === 0){
+if(selectedPlatforms.length === 0){
     toast.error("Select atleast one platform");
     return;
   }
   if(!scheduledDate || !scheduledTime){
     toast.error("Select date and time");
+    return;
+  }
+  // Instagram requires media (image/video). The generated post may not have an
+  // attached mediaUrl/image, so block scheduling to Instagram without media.
+  if(selectedPlatforms.includes("instagram") && !activeScheduler.mediaUrl){
+    toast.error("Instagram requires an image or video. Please generate with AI Image enabled.");
     return;
   }
 
