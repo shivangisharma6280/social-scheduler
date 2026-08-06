@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_BASE_URL || "http://localhost:3000/"
+    baseURL: "https://social-scheduler-backend-byp9.onrender.com"
 })
 
 export default api;
